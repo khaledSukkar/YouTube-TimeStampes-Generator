@@ -133,20 +133,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# GOOGLE_SSO_CLIENT_ID = "657849750142-2kq03a4j6v9r689rqkeptk9sot8clkk9.apps.googleusercontent.com"
-# GOOGLE_SSO_PROJECT_ID = "blango-dev-416910"
-# GOOGLE_SSO_CLIENT_SECRET = "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"
 
-# GOOGLE_SSO_ALLOWABLE_DOMAINS = ["example.com", 'gmail.com']
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # 'EMAIL_AUTHENTICATION': True,
-        # 'APP': {
-        #     'client_id': '657849750142-2kq03a4j6v9r689rqkeptk9sot8clkk9.apps.googleusercontent.com',
-        #     'secret': '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',
-        #     'key': ''
-        # },
         'APP': {
             'client_id': str(os.getenv('GOOGLE_CLIENT_ID')),
             'secret': str(os.getenv('GOOGLE_SECRET_KEY')),
